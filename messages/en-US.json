@@ -25,10 +25,65 @@
     "serverRendered": "Server-rendered at",
     "successMessage": "Thank you! Your message has been sent successfully."
   },
+  "Dashboard": {
+    "title": "Admin Dashboard",
+    "welcome": "Welcome to your admin dashboard with next-intl without routing",
+    "serverRendered": "Server-rendered at",
+    "localeInfo": {
+      "title": "Locale Information",
+      "current": "Current Locale",
+      "source": "Source",
+      "direction": "Text Direction"
+    },
+    "comparison": {
+      "title": "Routing Comparison",
+      "withoutRouting": "Without i18n Routing (Dashboard)",
+      "withRouting": "With i18n Routing",
+      "mainSite": "Main Site",
+      "features": {
+        "userSettings": "Locale from user settings/cookies",
+        "singleUrl": "Single URL structure",
+        "adminPanel": "Perfect for admin panels",
+        "cookieBased": "Cookie-based persistence",
+        "seoFriendly": "SEO-friendly URLs",
+        "urlBased": "URL-based locale detection",
+        "staticGeneration": "Static generation support",
+        "autoDetection": "Automatic locale detection"
+      }
+    },
+    "navigation": {
+      "title": "Quick Navigation",
+      "analytics": "Analytics",
+      "analyticsDesc": "View detailed analytics and reports",
+      "mainSiteDesc": "Go back to the main website"
+    },
+    "stats": {
+      "users": "Total Users",
+      "orders": "Orders",
+      "revenue": "Revenue",
+      "growth": "Growth"
+    }
+  },
+  "Analytics": {
+    "title": "Analytics Dashboard",
+    "description": "Detailed analytics and performance metrics",
+    "backToDashboard": "Back to Dashboard",
+    "metrics": {
+      "pageViews": "Page Views",
+      "uniqueVisitors": "Unique Visitors",
+      "bounceRate": "Bounce Rate",
+      "avgSession": "Avg. Session Duration"
+    },
+    "topPages": {
+      "title": "Top Pages",
+      "views": "views"
+    }
+  },
   "Navigation": {
     "home": "Home",
     "about": "About",
-    "contact": "Contact"
+    "contact": "Contact",
+    "dashboard": "Dashboard"
   },
   "Common": {
     "language": "Language",

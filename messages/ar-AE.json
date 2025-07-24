@@ -25,10 +25,65 @@
     "serverRendered": "تم إنشاؤها من الخادم في",
     "successMessage": "شكراً لك! تم إرسال رسالتك بنجاح."
   },
+  "Dashboard": {
+    "title": "لوحة التحكم",
+    "welcome": "مرحباً بك في لوحة التحكم مع next-intl بدون توجيه",
+    "serverRendered": "تم إنشاؤها من الخادم في",
+    "localeInfo": {
+      "title": "معلومات اللغة",
+      "current": "اللغة الحالية",
+      "source": "المصدر",
+      "direction": "اتجاه النص"
+    },
+    "comparison": {
+      "title": "مقارنة التوجيه",
+      "withoutRouting": "بدون توجيه i18n (لوحة التحكم)",
+      "withRouting": "مع توجيه i18n",
+      "mainSite": "الموقع الرئيسي",
+      "features": {
+        "userSettings": "اللغة من إعدادات المستخدم/الكوكيز",
+        "singleUrl": "هيكل URL واحد",
+        "adminPanel": "مثالي للوحات التحكم",
+        "cookieBased": "الاستمرارية القائمة على الكوكيز",
+        "seoFriendly": "روابط صديقة لمحركات البحث",
+        "urlBased": "كشف اللغة القائم على URL",
+        "staticGeneration": "دعم التوليد الثابت",
+        "autoDetection": "الكشف التلقائي للغة"
+      }
+    },
+    "navigation": {
+      "title": "التنقل السريع",
+      "analytics": "التحليلات",
+      "analyticsDesc": "عرض التحليلات والتقارير التفصيلية",
+      "mainSiteDesc": "العودة إلى الموقع الرئيسي"
+    },
+    "stats": {
+      "users": "إجمالي المستخدمين",
+      "orders": "الطلبات",
+      "revenue": "الإيرادات",
+      "growth": "النمو"
+    }
+  },
+  "Analytics": {
+    "title": "لوحة التحليلات",
+    "description": "تحليلات مفصلة ومقاييس الأداء",
+    "backToDashboard": "العودة للوحة التحكم",
+    "metrics": {
+      "pageViews": "مشاهدات الصفحة",
+      "uniqueVisitors": "الزوار الفريدون",
+      "bounceRate": "معدل الارتداد",
+      "avgSession": "متوسط مدة الجلسة"
+    },
+    "topPages": {
+      "title": "أهم الصفحات",
+      "views": "مشاهدة"
+    }
+  },
   "Navigation": {
     "home": "الرئيسية",
     "about": "حول",
-    "contact": "اتصل بنا"
+    "contact": "اتصل بنا",
+    "dashboard": "لوحة التحكم"
   },
   "Common": {
     "language": "اللغة",
