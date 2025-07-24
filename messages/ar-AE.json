@@ -1,0 +1,40 @@
+{
+  "HomePage": {
+    "title": "مرحباً بك في Next.js 15",
+    "description": "ابدأ بتحرير",
+    "learnMore": "اعرف المزيد",
+    "deploy": "انشر الآن"
+  },
+  "AboutPage": {
+    "title": "من نحن",
+    "description": "اعرف المزيد حول إعداد التدويل في Next.js"
+  },
+  "ContactPage": {
+    "title": "اتصل بنا",
+    "description": "تواصل مع فريقنا. نحن هنا لمساعدتك في أي أسئلة أو استفسارات.",
+    "contactInfo": "معلومات الاتصال",
+    "office": "المكتب",
+    "address": "العنوان",
+    "phone": "الهاتف",
+    "email": "البريد الإلكتروني",
+    "hours": "ساعات العمل",
+    "sendMessage": "أرسل لنا رسالة",
+    "name": "الاسم الكامل",
+    "message": "الرسالة",
+    "submit": "إرسال الرسالة",
+    "serverRendered": "تم إنشاؤها من الخادم في",
+    "successMessage": "شكراً لك! تم إرسال رسالتك بنجاح."
+  },
+  "Navigation": {
+    "home": "الرئيسية",
+    "about": "حول",
+    "contact": "اتصل بنا"
+  },
+  "Common": {
+    "language": "اللغة",
+    "switchLanguage": "تغيير اللغة",
+    "english": "الإنجليزية",
+    "arabic": "العربية",
+    "backToHome": "العودة للرئيسية"
+  }
+}

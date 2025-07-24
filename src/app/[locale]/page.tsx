@@ -1,9 +1,24 @@
+import React from 'react';
 import Image from "next/image";
+import { useTranslations } from 'next-intl';
+import { setRequestLocale } from 'next-intl/server';
+import LanguageSwitcher from '@/components/LanguageSwitcher';
+import Navigation from '@/components/Navigation';
 
-export default function Home() {
+export default function Home({
+  params
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  // This is required for static rendering
+  const { locale } = React.use(params);
+  setRequestLocale(locale);
+
+  const t = useTranslations('HomePage');
   return (
     <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
+        <Navigation />
         <Image
           className="dark:invert"
           src="/next.svg"
@@ -14,9 +29,9 @@ export default function Home() {
         />
         <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
           <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
+            {t('description')}{" "}
             <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
+              src/app/[locale]/page.tsx
             </code>
             .
           </li>
@@ -39,7 +54,7 @@ export default function Home() {
               width={20}
               height={20}
             />
-            Deploy now
+            {t('deploy')}
           </a>
           <a
             className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
@@ -47,11 +62,13 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Read our docs
+            {t('learnMore')}
           </a>
         </div>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
+      <div className="row-start-3 flex flex-col gap-4 items-center">
+        <LanguageSwitcher />
+        <footer className="flex gap-[24px] flex-wrap items-center justify-center">
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
           href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
@@ -97,7 +114,8 @@ export default function Home() {
           />
           Go to nextjs.org →
         </a>
-      </footer>
+        </footer>
+      </div>
     </div>
   );
 }
