@@ -90,6 +90,11 @@
     "switchLanguage": "Switch Language",
     "english": "English",
     "arabic": "Arabic",
-    "backToHome": "Back to Home"
+    "backToHome": "Back to Home",
+    "theme": "Theme",
+    "switchTheme": "Switch Theme",
+    "themeSystem": "System",
+    "themeLight": "Light",
+    "themeDark": "Dark"
   }
 }

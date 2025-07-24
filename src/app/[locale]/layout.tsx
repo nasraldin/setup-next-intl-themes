@@ -5,6 +5,10 @@ import { getMessages, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import "../globals.css";
+import Navigation from '@/components/Navigation';
+import LanguageSwitcher from '@/components/LanguageSwitcher';
+import ThemeSwitcher from '@/components/ThemeSwitcher';
+import { ThemeProvider } from '@/components/providers/ThemeProvider';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -49,13 +53,30 @@ export default async function LocaleLayout({
   const dir = locale === 'ar-AE' ? 'rtl' : 'ltr';
 
   return (
-    <html lang={locale} dir={dir}>
+    <html lang={locale} dir={dir} suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors`}
       >
-        <NextIntlClientProvider messages={messages}>
-          {children}
-        </NextIntlClientProvider>
+        <ThemeProvider>
+          <NextIntlClientProvider messages={messages}>
+            <div className="min-h-screen p-8">
+              {/* Header with navigation and switchers */}
+              <div className="mb-8 space-y-4">
+                <div className="flex flex-wrap items-center justify-between gap-4">
+                  <h1 className="text-2xl font-bold">Next.js 15 + next-intl + next-themes</h1>
+                  <div className="flex flex-wrap items-center gap-4">
+                    <LanguageSwitcher />
+                    <ThemeSwitcher />
+                  </div>
+                </div>
+                <Navigation />
+              </div>
+
+              {/* Main content */}
+              <main>{children}</main>
+            </div>
+          </NextIntlClientProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

@@ -90,6 +90,11 @@
     "switchLanguage": "تغيير اللغة",
     "english": "الإنجليزية",
     "arabic": "العربية",
-    "backToHome": "العودة للرئيسية"
+    "backToHome": "العودة للرئيسية",
+    "theme": "المظهر",
+    "switchTheme": "تغيير المظهر",
+    "themeSystem": "النظام",
+    "themeLight": "فاتح",
+    "themeDark": "داكن"
   }
 }
