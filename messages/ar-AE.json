@@ -96,5 +96,25 @@
     "themeSystem": "النظام",
     "themeLight": "فاتح",
     "themeDark": "داكن"
+  },
+  "SEO": {
+    "home": {
+      "title": "مرحباً بك في Next.js 15",
+      "description": "ابدأ بتحرير تطبيق Next.js مع دعم التدويل",
+      "ogTitle": "مرحباً بك في Next.js 15 - عرض التدويل",
+      "ogDescription": "عرض شامل لـ Next.js 15 مع دعم التدويل"
+    },
+    "about": {
+      "title": "من نحن",
+      "description": "اعرف المزيد حول إعداد التدويل في Next.js والميزات",
+      "ogTitle": "من نحن - تدويل Next.js",
+      "ogDescription": "اكتشف إعداد Next.js 15 مع ميزات التدويل الشاملة"
+    },
+    "contact": {
+      "title": "اتصل بنا",
+      "description": "تواصل مع فريقنا. نحن هنا لمساعدتك في أي أسئلة أو استفسارات.",
+      "ogTitle": "اتصل بنا - تواصل معنا",
+      "ogDescription": "تواصل مع فريقنا لأي أسئلة أو استفسارات حول خدماتنا"
+    }
   }
 }

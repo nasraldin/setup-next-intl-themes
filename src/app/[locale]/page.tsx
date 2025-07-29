@@ -4,6 +4,44 @@ import { useTranslations } from 'next-intl';
 import { setRequestLocale } from 'next-intl/server';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
 import Navigation from '@/components/Navigation';
+import { generateSEO } from '@/lib/seo-metadata';
+
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  
+  // Import messages dynamically
+  const messages = (await import(`../../../messages/${locale}.json`)).default;
+  const seoT = (key: string) => {
+    const keys = key.split('.');
+    let value: unknown = messages;
+    for (const k of keys) {
+      value = (value as Record<string, unknown>)?.[k];
+    }
+    return (value as string) || key;
+  };
+
+  return generateSEO({
+    title: seoT('SEO.home.title'),
+    description: seoT('SEO.home.description'),
+    openGraph: {
+      title: seoT('SEO.home.ogTitle'),
+      description: seoT('SEO.home.ogDescription'),
+      images: [
+        {
+          url: 'https://yourdomain.com/og-home.jpg',
+          width: 1200,
+          height: 630,
+          alt: seoT('SEO.home.title'),
+        },
+      ],
+    },
+  });
+}
 
 export default function Home({
   params
@@ -15,6 +53,7 @@ export default function Home({
   setRequestLocale(locale);
 
   const t = useTranslations('HomePage');
+  
   return (
     <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">

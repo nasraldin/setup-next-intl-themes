@@ -96,5 +96,25 @@
     "themeSystem": "System",
     "themeLight": "Light",
     "themeDark": "Dark"
+  },
+  "SEO": {
+    "home": {
+      "title": "Welcome to Next.js 15",
+      "description": "Get started by editing your Next.js application with internationalization support",
+      "ogTitle": "Welcome to Next.js 15 - Internationalization Demo",
+      "ogDescription": "A comprehensive demo of Next.js 15 with next-intl internationalization support"
+    },
+    "about": {
+      "title": "About Us",
+      "description": "Learn more about our Next.js internationalization setup and features",
+      "ogTitle": "About Us - Next.js Internationalization",
+      "ogDescription": "Discover our Next.js 15 setup with comprehensive internationalization features"
+    },
+    "contact": {
+      "title": "Contact Us",
+      "description": "Get in touch with our team. We're here to help you with any questions or inquiries.",
+      "ogTitle": "Contact Us - Get in Touch",
+      "ogDescription": "Contact our team for any questions or inquiries about our services"
+    }
   }
 }

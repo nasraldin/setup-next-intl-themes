@@ -4,6 +4,7 @@ import { routing } from '@/i18n/routing';
 import Navigation from '@/components/Navigation';
 import { Link } from '@/i18n/navigation';
 import { submitContactForm } from './actions';
+import { generateSEO } from '@/lib/seo-metadata';
 
 /**
  * SERVER-SIDE CONTACT PAGE DEMONSTRATION
@@ -63,12 +64,28 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>
 }) {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'ContactPage' });
-
-  return {
-    title: t('title'),
-    description: t('description'),
+  setRequestLocale(locale);
+  
+  // Import messages dynamically
+  const messages = (await import(`../../../../messages/${locale}.json`)).default;
+  const seoT = (key: string) => {
+    const keys = key.split('.');
+    let value: unknown = messages;
+    for (const k of keys) {
+      value = (value as Record<string, unknown>)?.[k];
+    }
+    return (value as string) || key;
   };
+
+  return generateSEO({
+    title: seoT('SEO.contact.title'),
+    description: seoT('SEO.contact.description'),
+    openGraph: {
+      title: seoT('SEO.contact.ogTitle'),
+      description: seoT('SEO.contact.ogDescription'),
+      type: 'website',
+    },
+  });
 }
 
 // This is a Server Component - it runs on the server
